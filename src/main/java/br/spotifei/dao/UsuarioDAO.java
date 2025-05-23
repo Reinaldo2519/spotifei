@@ -12,7 +12,12 @@ import java.sql.SQLException;
 
 public class UsuarioDAO {
 
-    // Cadastrar novo usuário
+    
+
+
+
+
+//  parte dee cadastrar novo usuario
     public void cadastrar(Usuario usuario) {
         String sql = "INSERT INTO usuario (nome, email, senha, tipo) VALUES (?, ?, ?, ?)";
 
@@ -25,14 +30,21 @@ public class UsuarioDAO {
             stmt.setString(4, usuario.getTipo());
 
             stmt.executeUpdate();
-            System.out.println("Usuário cadastrado com sucesso!");
+            System.out.println("ussuário cadastrado");
 
         } catch (SQLException e) {
-            System.out.println("Erro ao cadastrar usuário: " + e.getMessage());
+            System.out.println("erro para cadastrar usuario " + e.getMessage());
         }
     }
 
-    // Buscar usuário por email e senha (login)
+    
+
+
+
+
+
+// procurar usuario por email e senha parte de login
+    
     public Usuario buscarPorEmailESenha(String email, String senha) {
         String sql = "SELECT * FROM usuario WHERE email = ? AND senha = ?";
 
@@ -55,10 +67,13 @@ public class UsuarioDAO {
             }
 
         } catch (SQLException e) {
-            System.out.println("Erro ao buscar usuário: " + e.getMessage());
+            System.out.println("erro para achar usuario: " + e.getMessage());
         }
 
-        return null; // se não encontrar
+        
+        
+        // se nao encontrar ele
+        return null; 
     }
 }
 

@@ -5,12 +5,15 @@
 package br.spotifei.model;
 
 public class Musica {
-    private int id;
-    private String nomeMusica;
-    private String autor;
-    private String genero;
+    private int id; // obrigatorio
+    private String nomeMusica; // obrigatorio
+    private String autor; // obrigatorio
+    private String genero; // obrigatorio
     private Integer duracao; // opcional
     private String lancamento; // opcional
+    private int curtidas;
+    private int descurtidas;
+
 
     public Musica() {}
 
@@ -21,7 +24,24 @@ public class Musica {
         this.duracao = duracao;
         this.lancamento = lancamento;
     }
+    
+    public int getCurtidas() {
+    return curtidas;
+}
 
+    public void setCurtidas(int curtidas) {
+        this.curtidas = curtidas;
+    }
+
+    public int getDescurtidas() {
+        return descurtidas;
+    }
+
+    public void setDescurtidas(int descurtidas) {
+        this.descurtidas = descurtidas;
+    }
+
+    
     public int getId() { return id; }
     public void setId(int id) { this.id = id; }
 

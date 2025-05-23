@@ -14,12 +14,17 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         UsuarioDAO dao = new UsuarioDAO();
 
-        System.out.println("===== MENU =====");
-        System.out.println("1 - Cadastrar usuário");
+        System.out.println("---- OPÇÕES----");
+        System.out.println("1 - Fazer cadastro");
         System.out.println("2 - Fazer login");
-        System.out.print("Escolha: ");
+        System.out.print("DIigte: ");
         int opcao = scanner.nextInt();
-        scanner.nextLine(); // consumir quebra de linha
+        
+        
+        
+        
+        // tirar quebra de linha
+        scanner.nextLine(); 
 
         if (opcao == 1) {
             System.out.print("Nome: ");
@@ -40,12 +45,12 @@ public class Main {
 
             Usuario usuario = dao.buscarPorEmailESenha(email, senha);
             if (usuario != null) {
-                System.out.println("Login bem-sucedido! Bem-vindo, " + usuario.getNome());
+                System.out.println("Login foi feito com suceeso, " + usuario.getNome());
             } else {
-                System.out.println("Email ou senha inválidos.");
+                System.out.println("Email/senha incorreto");
             }
         } else {
-            System.out.println("Opção inválida.");
+            System.out.println("erro, opçao invalida.");
         }
 
         scanner.close();
