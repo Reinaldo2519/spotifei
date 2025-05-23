@@ -58,8 +58,6 @@ public class CadastroMusicaFrame extends javax.swing.JFrame {
             }
         });
 
-        lblMensagem.setText("jLabel6");
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -118,7 +116,7 @@ public class CadastroMusicaFrame extends javax.swing.JFrame {
                 .addComponent(btnSalvar)
                 .addGap(32, 32, 32)
                 .addComponent(lblMensagem)
-                .addContainerGap(33, Short.MAX_VALUE))
+                .addContainerGap(49, Short.MAX_VALUE))
         );
 
         pack();
